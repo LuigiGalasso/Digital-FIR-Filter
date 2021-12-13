@@ -1,6 +1,3 @@
-vlib work
-vcom -reportprogress 300 -work work ./constants.vhd
-vcom -reportprogress 300 -work work ./reg.vhd
 vcom -reportprogress 300 -work work ./myfir.vhd
 vcom -reportprogress 300 -work work ./testbench/clk_gen.vhd
 vcom -reportprogress 300 -work work ./testbench/data_maker_new.vhd
