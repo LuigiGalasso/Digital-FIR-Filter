@@ -1,0 +1,98 @@
+Information: Updating design information... (UID-85)
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : myfir
+Version: O-2018.06-SP4
+Date   : Tue Nov  5 12:37:23 2019
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: B2[1] (input port clocked by MY_CLK)
+  Endpoint: sig_dout_reg[2][13]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  myfir              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 r
+  B2[1] (in)                                              0.00       0.50 r
+  mult_68/a[1] (myfir_DW_mult_tc_34)                      0.00       0.50 r
+  mult_68/U703/Z (BUF_X1)                                 0.13       0.63 r
+  mult_68/U896/ZN (XNOR2_X1)                              0.09       0.72 r
+  mult_68/U876/ZN (OAI22_X1)                              0.04       0.77 f
+  mult_68/U310/CO (FA_X1)                                 0.10       0.87 f
+  mult_68/U304/CO (FA_X1)                                 0.09       0.97 f
+  mult_68/U297/S (FA_X1)                                  0.13       1.10 r
+  mult_68/U296/S (FA_X1)                                  0.11       1.21 f
+  mult_68/U807/ZN (NOR2_X1)                               0.06       1.28 r
+  mult_68/U1082/ZN (OAI21_X1)                             0.04       1.31 f
+  mult_68/U1083/ZN (AOI21_X1)                             0.06       1.37 r
+  mult_68/U730/ZN (INV_X1)                                0.04       1.41 f
+  mult_68/U1047/ZN (AOI21_X1)                             0.05       1.46 r
+  mult_68/U638/ZN (XNOR2_X1)                              0.04       1.49 f
+  mult_68/product[15] (myfir_DW_mult_tc_34)               0.00       1.49 f
+  add_5_root_add_1_root_add_88_G8/A[15] (myfir_DW01_add_56)
+                                                          0.00       1.49 f
+  add_5_root_add_1_root_add_88_G8/U436/ZN (NAND2_X1)      0.04       1.53 r
+  add_5_root_add_1_root_add_88_G8/U264/ZN (INV_X1)        0.02       1.55 f
+  add_5_root_add_1_root_add_88_G8/U263/ZN (AOI21_X1)      0.06       1.61 r
+  add_5_root_add_1_root_add_88_G8/U425/ZN (OAI21_X1)      0.03       1.65 f
+  add_5_root_add_1_root_add_88_G8/U294/ZN (AOI21_X1)      0.06       1.71 r
+  add_5_root_add_1_root_add_88_G8/U427/ZN (INV_X1)        0.04       1.75 f
+  add_5_root_add_1_root_add_88_G8/U434/ZN (XNOR2_X1)      0.06       1.81 f
+  add_5_root_add_1_root_add_88_G8/SUM[17] (myfir_DW01_add_56)
+                                                          0.00       1.81 f
+  add_1_root_add_1_root_add_88_G8/B[17] (myfir_DW01_add_76)
+                                                          0.00       1.81 f
+  add_1_root_add_1_root_add_88_G8/U355/ZN (NAND2_X1)      0.04       1.85 r
+  add_1_root_add_1_root_add_88_G8/U350/ZN (INV_X1)        0.02       1.87 f
+  add_1_root_add_1_root_add_88_G8/U405/ZN (AOI21_X1)      0.05       1.92 r
+  add_1_root_add_1_root_add_88_G8/U399/ZN (OAI21_X1)      0.04       1.96 f
+  add_1_root_add_1_root_add_88_G8/U375/ZN (AOI21_X1)      0.05       2.01 r
+  add_1_root_add_1_root_add_88_G8/U408/ZN (INV_X1)        0.03       2.04 f
+  add_1_root_add_1_root_add_88_G8/U411/ZN (AOI21_X1)      0.05       2.09 r
+  add_1_root_add_1_root_add_88_G8/U391/Z (XOR2_X1)        0.08       2.17 r
+  add_1_root_add_1_root_add_88_G8/SUM[21] (myfir_DW01_add_76)
+                                                          0.00       2.17 r
+  add_0_root_add_1_root_add_88_G8/B[21] (myfir_DW01_add_74)
+                                                          0.00       2.17 r
+  add_0_root_add_1_root_add_88_G8/U334/ZN (NAND2_X1)      0.04       2.21 f
+  add_0_root_add_1_root_add_88_G8/U326/ZN (OAI21_X1)      0.07       2.27 r
+  add_0_root_add_1_root_add_88_G8/U340/ZN (AOI21_X1)      0.04       2.31 f
+  add_0_root_add_1_root_add_88_G8/U316/ZN (OAI21_X1)      0.04       2.35 r
+  add_0_root_add_1_root_add_88_G8/U338/ZN (AOI21_X1)      0.04       2.38 f
+  add_0_root_add_1_root_add_88_G8/U272/ZN (XNOR2_X1)      0.05       2.44 f
+  add_0_root_add_1_root_add_88_G8/SUM[26] (myfir_DW01_add_74)
+                                                          0.00       2.44 f
+  U618/Z (MUX2_X1)                                        0.07       2.50 f
+  sig_dout_reg[2][13]/D (DFF_X1)                          0.01       2.51 f
+  data arrival time                                                  2.51
+
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                      -0.07      -0.07
+  sig_dout_reg[2][13]/CK (DFF_X1)                         0.00      -0.07 r
+  library setup time                                     -0.04      -0.11
+  data required time                                                -0.11
+  --------------------------------------------------------------------------
+  data required time                                                -0.11
+  data arrival time                                                 -2.51
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -2.62
+
+
+1
